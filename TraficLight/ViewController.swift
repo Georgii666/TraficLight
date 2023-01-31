@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startButton.titleLabel?.font = UIFont(name: "Arial", size: 30)
+        startButton.layer.cornerRadius = 6
         
         redView.alpha = 0.3
         yellowView.alpha = 0.3
@@ -23,11 +25,9 @@ class ViewController: UIViewController {
         redView.layer.cornerRadius = 50
         yellowView.layer.cornerRadius = 50
         greenView.layer.cornerRadius = 50
-        
     }
     
     @IBAction func startButtonTapped() {
-        
         startButton.setTitle("Next", for: .normal)
         
         if redView.alpha != 1 && yellowView.alpha != 1 && greenView.alpha != 1 {
@@ -43,7 +43,6 @@ class ViewController: UIViewController {
             redView.alpha = 0.3
             greenView.alpha = 0.3
         }
-        
     }
 }
 
